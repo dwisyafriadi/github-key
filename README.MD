@@ -27,7 +27,7 @@ ssh-keygen -t ed25519 -C "github-actions-deploy" -f ~/.ssh/github_deploy
 # Tekan ENTER 2x untuk passphrase kosong
 
 # Buat SSH config (pakai port 443 kalau port 22 diblokir)
-cat > ~/.ssh/config << 'EOF'
+```cat > ~/.ssh/config << 'EOF'
 Host github.com
     HostName ssh.github.com
     Port 443
@@ -35,6 +35,7 @@ Host github.com
     IdentityFile ~/.ssh/github_deploy
     StrictHostKeyChecking no
 EOF
+```
 
 # Set permissions yang benar
 chmod 700 ~/.ssh
